@@ -1,0 +1,155 @@
+
+FilipeDell@FNot MINGW64 ~/Dev/test
+$ git clone https://github.com/emjogale/practice.git
+Cloning into 'practice'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 584 bytes | 14.00 KiB/s, done.
+
+FilipeDell@FNot MINGW64 ~/Dev/test
+$ git init
+Initialized empty Git repository in C:/Users/FilipeDell/Dev/test/.git/
+
+FilipeDell@FNot MINGW64 ~/Dev/test (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        practice/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+FilipeDell@FNot MINGW64 ~/Dev/test (master)
+$ cd practice
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (main)
+$ git add .
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (main)
+$ git commit -m "test filipe"
+[main 3901a9c] test filipe
+ 1 file changed, 3 insertions(+)
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (main)
+$ git push -m origin main
+error: unknown switch `m'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (main)
+$ git push -u origin main
+remote: Permission to emjogale/practice.git denied to Cancellier27.
+fatal: unable to access 'https://github.com/emjogale/practice.git/': The requested URL returned error: 403
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (main)
+$ git checkout filipeBranch
+error: pathspec 'filipeBranch' did not match any file(s) known to git
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (main)
+$ git branch filipeBranch
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (main)
+$ git checkout filipeBranch
+Switched to branch 'filipeBranch'
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (filipeBranch)
+$ git add .
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (filipeBranch)
+$ git commit -m  "test filipe 2"
+On branch filipeBranch
+nothing to commit, working tree clean
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (filipeBranch)
+$ git push -u filipeBranch
+fatal: 'filipeBranch' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (filipeBranch)
+$ git push -u origin filipeBranch
+remote: Permission to emjogale/practice.git denied to Cancellier27.
+fatal: unable to access 'https://github.com/emjogale/practice.git/': The requested URL returned error: 403
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (filipeBranch)
+$ git status
+On branch filipeBranch
+nothing to commit, working tree clean
+
+FilipeDell@FNot MINGW64 ~/Dev/test/practice (filipeBranch)
+$ git push -u origin filipeBranch
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 283 bytes | 283.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'filipeBranch' on GitHub by visiting:
+remote:      https://github.com/emjogale/practice/pull/new/filipeBranch
+remote:
+To https://github.com/emjogale/practice.git
+ * [new branch]      filipeBranch -> filipeBranch
+Branch 'filipeBranch' set up to track remote branch 'filipeBranch' from 'origin'.
