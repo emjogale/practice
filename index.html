@@ -10,6 +10,55 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Practice</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
-	<body></body>
+	<body>
+		<div class="form-container">
+			<h1>Useful Links Upload Form</h1>
+
+			<div>
+				<form>
+					<label for="topic">TOPIC:</label>
+					<input type="checkbox" name="topic" id="html" />
+					<label for="html">Html</label>
+					<input type="checkbox" name="topic" id="css" />
+					<label for="css">CSS</label>
+					<input type="checkbox" name="topic" id="js" />
+					<label for="js">JavaScript</label>
+					<input type="checkbox" name="topic" id="general" />
+					<label for="general">General</label>
+					<br />
+					<label for="summary">TITLE/SUMMARY:</label>
+					<input type="text" id="summary" name="summary" />
+					<br />
+					<label for="date">DATE:</label>
+					<input type="date" id="article-date" name="atricle-date" />
+					<br />
+					<label for="article">ARTICLE URL:</label>
+					<input type="url" id="article" name="article" />
+					<br />
+					<label for="channels">ORIGINALLY POSTED IN:</label>
+					<select name="channels" id="channels">
+						<option value="css">CSS</option>
+						<option value="js">Javascript</option>
+						<option value="ask">Ask-fac</option>
+						<option value="katas">Codewars-katas</option>
+						<option value="london">London</option>
+						<option value="other">Other</option>
+					</select>
+					<br />
+					<label for="name">POSTED BY:</label>
+					<input type="text" id="name" name="name" />
+					<br />
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+		</div>
+	</body>
 </html>
