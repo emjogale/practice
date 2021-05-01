@@ -54,9 +54,29 @@
 					<label for="name">POSTED BY:</label>
 					<input type="text" id="name" name="name" />
 					<br />
-					<input type="submit" value="Submit" />
+					<input type="submit" onclick="add_record()" value="Submit" />
 				</form>
 			</div>
 		</div>
+		<script>
+			
+			// submit will trigger JSON file to add new record to JSON object
+			//	{"slack_links": []}
+			//
+			// using this method:
+			//	yourObj.slack_links.push({"teamId":"4","status":"pending"});
+			//
+			//test adding this: 
+			//     {"Date":"12/05/20","Summary":"JavaScript.info","Link":"http://javascript.info/","Topic":"this keyword",
+			//     "Slack Channel":"#london","User ":"Reuben FAC17"}
+			function add_record(){
+				console.log("it's alive!")
+			}
+			
+			
+    
+		</script>
 	</body>
 </html>
+
+
