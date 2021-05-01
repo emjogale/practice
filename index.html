@@ -15,7 +15,7 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap"
 			rel="stylesheet"
 		/>
-		<script type="text/javascript" src="path/to/script.js"></script>
+		<script type="text/javascript" src="links.json"></script>
 	</head>
 	<body>
 		<div class="form-container">
@@ -74,7 +74,7 @@
 				//console.log("it works!")
 			const fs = require('fs');
 
-			fs.readFile('links.JSON', (err, data) => {
+			fs.readFile('links.json', (err, data) => {
     				if(err) {
         				throw err;
     				}
